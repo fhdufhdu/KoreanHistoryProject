@@ -1,18 +1,30 @@
-# Build and Release Folders
+# 빌드 된 프로그램들
 bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
 
-# Other files and folders
+# 각종 설정 폴더들
 .settings/
 
-# Executables
+
+# 제외 파일들
 *.swf
 *.air
 *.ipa
 *.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+*.jar
+*.pom
+*.json
+*.exe
+*.pickle
+*.txt
+*.zip
+*.pyc
+*.tar.gz
+*.bin
+*.xml
+*.pt
+*.model
+*.vocab
+util/__pycache__/func.cpython-36.pyc

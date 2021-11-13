@@ -1,10 +1,8 @@
 import torch
 from transformers import AutoModelForQuestionAnswering, BertForQuestionAnswering
 from transformers import BertTokenizer
-from tokenization_kobert import KoBertTokenizer
 
-# DEFAULT_PATH = '/home/fhdufhdu/vscode/Project/data/models/model_bert'
-DEFAULT_PATH = '/home/fhdufhdu/vscode/Project/data/models/finetunedModel'
+DEFAULT_PATH = '/home/fhdufhdu/vscode/Project/data/models/model_bert'
 
 
 class KoHisQnA:
@@ -32,12 +30,11 @@ class KoHisQnA:
         as_idx = torch.argmax(answer_start_vector)
         ae_idx = torch.argmax(answer_end_vector) + 1
 
-        # 정답을 구하기 위한 과기
+        # 정답을 구하기 위한 과정
         input_ids = inputs["input_ids"].tolist()[0]
         text_tokens = self.tokenizer.convert_ids_to_tokens(input_ids)
         answer = self.tokenizer.convert_tokens_to_string(
             text_tokens[as_idx:ae_idx])
-        print(text_tokens[as_idx:ae_idx])
 
         return (int(as_idx), int(ae_idx), answer)
 

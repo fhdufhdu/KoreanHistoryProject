@@ -64,7 +64,6 @@ from transformers.data.metrics.squad_metrics import (
 from transformers.data.processors.squad import SquadResult, SquadV1Processor, SquadV2Processor
 
 from tokenization_kobert import KoBertTokenizer
-from tokenization_kor_history import KorHistoryTokenizer
 
 try:
     from torch.utils.tensorboard import SummaryWriter
@@ -890,7 +889,8 @@ def main():
 
     # tokenizer = KorHistoryTokenizer(
     #     vocab_file='sentencepiece/tokenizer_119547.model', vocab_txt='vocab.txt')
-    tokenizer = BertTokenizer.from_pretrained('./tokenizer_model')
+    tokenizer = BertTokenizer.from_pretrained(
+        '/home/fhdufhdu/vscode/Project/data/models/model_bert')
     # tokenizer = KoBertTokenizer("https://s3.amazonaws.com/models.huggingface.co/bert/monologg/kobert/tokenizer_78b3253a26.model",
     #                             do_lower_case=args.do_lower_case,
     #                             vocab_txt='/home/fhdufhdu/vscode/KoreanHistoryProject/QAmodel/vocab.txt')

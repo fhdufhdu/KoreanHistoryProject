@@ -1,3 +1,3 @@
 # KoreanHistoryProject
 
-### 한석, 재준 어서오고~
+### Quiz Generator & Flask Server
